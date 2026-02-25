@@ -1,26 +1,29 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@tailwind utilities;
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+   --color-background: var(--background);
+   --color-foreground: var(--foreground);
+   --font-sans: var(--font-geist-sans);
+   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
+html,
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+   /* New background: light purple with darker dots */
+   background-color: #e5e5f7; /* base color */
+   background-image: radial-gradient(
+      circle at center,
+      rgba(68, 76, 247, 0.2) 0.5px,
+      /* dot color with transparency */ transparent 0.5px
+   );
+   background-size: 10px 10px; /* spacing of the dots */
+
+   /* Keep your text color and other essential styles */
+   color: var(--foreground);
+   min-height: 100vh;
+   margin: 0;
+   padding: 0;
+   font-family: Arial, Helvetica, sans-serif;
 }
