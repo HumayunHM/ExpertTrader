@@ -11,20 +11,20 @@ export default function Features() {
    ];
 
    return (
-      <section id="features" className="py-16 bg-white">
+      <section id="features" className="py-16 bg-gray-900">
          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-center text-white mb-12">
                Comprehensive Forex Trading Program Features
             </h2>
             <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
                {features.map((feature, index) => (
                   <div
                      key={index}
-                     className="bg-gray-50 p-6 rounded-xl border border-gray-100 shadow-sm hover:shadow-md transition"
+                     className="bg-gray-800 p-6 rounded-xl border border-gray-700 shadow-sm hover:shadow-md transition"
                   >
-                     <div className="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center mb-4">
+                     <div className="w-10 h-10 bg-blue-900/50 rounded-full flex items-center justify-center mb-4">
                         <svg
-                           className="w-5 h-5 text-blue-600"
+                           className="w-5 h-5 text-blue-400"
                            fill="currentColor"
                            viewBox="0 0 20 20"
                         >
@@ -35,7 +35,7 @@ export default function Features() {
                            />
                         </svg>
                      </div>
-                     <p className="text-gray-800 font-medium">{feature}</p>
+                     <p className="text-gray-200 font-medium">{feature}</p>
                   </div>
                ))}
             </div>

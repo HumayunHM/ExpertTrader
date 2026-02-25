@@ -2,27 +2,39 @@ import Image from "next/image";
 
 export default function Hero() {
    return (
-      <section className="bg-gradient-to-br from-blue-50 to-white py-16 md:py-24">
+      <section className="bg-gradient-to-br from-blue-900 to-gray-900 py-4 md:py-8">
          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid md:grid-cols-2 gap-12 items-center">
-               <div>
-                  <h1 className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight">
-                     Badar Trader
-                  </h1>
-                  <h2 className="text-2xl md:text-3xl font-semibold text-blue-600 mt-2">
+            <div className="grid md:grid-cols-2 gap-8 lg:gap-12 items-center">
+               {/* Left side content */}
+               <div className="flex flex-col items-start">
+                  {/* Logo */}
+                  <div className="mb-4">
+                     <Image
+                        src="/logo.png"
+                        alt="Badar Trader Logo"
+                        width={300}
+                        height={300}
+                        className="w-48 md:w-64 h-auto block"
+                        priority
+                     />
+                  </div>
+
+                  <h2 className="text-2xl md:text-3xl font-semibold text-blue-400 mt-2">
                      Learn Trading From The Top Mentor of Pakistan
                   </h2>
-                  <p className="text-lg text-gray-600 mt-4">
+
+                  <p className="text-lg text-gray-300 mt-4">
                      Get The MentorShip of The Most Experienced and Successful
                      Mentor
                   </p>
+
                   <div className="mt-8 flex flex-wrap gap-4 items-center">
-                     <button className="bg-blue-600 hover:bg-blue-700 text-white font-medium px-8 py-3 rounded-lg shadow-md transition">
+                     <button className="bg-blue-600 hover:bg-blue-500 text-white font-medium px-8 py-3 rounded-lg shadow-md transition">
                         JOIN THE COURSE
                      </button>
-                     <span className="text-gray-500 flex items-center gap-2">
+                     <span className="text-gray-400 flex items-center gap-2">
                         <svg
-                           className="w-5 h-5 text-blue-500"
+                           className="w-5 h-5 text-blue-400"
                            fill="currentColor"
                            viewBox="0 0 20 20"
                         >
@@ -32,11 +44,18 @@ export default function Hero() {
                      </span>
                   </div>
                </div>
-               <div className="relative h-64 md:h-96 bg-gray-200 rounded-2xl shadow-lg overflow-hidden">
-                  {/* Placeholder image */}
-                  <div className="absolute inset-0 flex items-center justify-center text-gray-500">
-                     <span>Hero Image Placeholder</span>
-                  </div>
+
+               {/* Right side - image with overlay, now with max width and centered */}
+               <div className="relative w-full max-w-sm mx-auto rounded-2xl shadow-lg overflow-hidden aspect-[597/800]">
+                  <Image
+                     src="/hero-image.jpeg" // replace with your actual image file name
+                     alt="Hero visual"
+                     fill
+                     className="object-cover"
+                     priority
+                  />
+                  {/* Overlay that fades out on hover */}
+                  <div className="absolute inset-0 bg-black/40 transition-opacity hover:opacity-0"></div>
                </div>
             </div>
          </div>
