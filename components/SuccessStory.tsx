@@ -4,7 +4,6 @@ import Image from "next/image";
 import { useState } from "react";
 
 export default function SuccessStory() {
-   // Replace with your actual image paths
    const images = [
       "/success1.jpeg",
       "/success2.jpeg",
@@ -20,7 +19,7 @@ export default function SuccessStory() {
    ];
 
    const [currentIndex, setCurrentIndex] = useState(0);
-   const imagesPerView = 3; // number of images shown at once
+   const imagesPerView = 3;
 
    const totalSlides = Math.ceil(images.length / imagesPerView);
    const maxIndex = totalSlides - 1;
@@ -42,7 +41,6 @@ export default function SuccessStory() {
 
             {/* Carousel container */}
             <div className="relative max-w-6xl mx-auto">
-               {/* Images wrapper */}
                <div className="overflow-hidden rounded-2xl">
                   <div
                      className="flex transition-transform duration-500 ease-out"
@@ -50,12 +48,12 @@ export default function SuccessStory() {
                         transform: `translateX(-${currentIndex * 100}%)`,
                      }}
                   >
-                     {/* Map through images and group them into slides */}
                      {Array.from({ length: totalSlides }).map(
                         (_, slideIndex) => (
                            <div
                               key={slideIndex}
-                              className="min-w-full grid grid-cols-1 md:grid-cols-3 gap-4 px-1"
+                              // 3 columns on all screens, tighter gap on mobile
+                              className="min-w-full grid grid-cols-3 gap-2 md:gap-4 px-1"
                            >
                               {images
                                  .slice(
@@ -65,14 +63,19 @@ export default function SuccessStory() {
                                  .map((src, imgIndex) => (
                                     <div
                                        key={imgIndex}
+                                       // 9:16 aspect ratio, with a subtle hover effect
                                        className="relative aspect-[9/16] rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow"
                                     >
                                        <Image
                                           src={src}
-                                          alt={`Success screenshot ${slideIndex * imagesPerView + imgIndex + 1}`}
+                                          alt={`Success screenshot ${
+                                             slideIndex * imagesPerView +
+                                             imgIndex +
+                                             1
+                                          }`}
                                           fill
                                           className="object-cover"
-                                          sizes="(max-width: 768px) 100vw, 33vw"
+                                          sizes="(max-width: 640px) 33vw, 25vw"
                                        />
                                     </div>
                                  ))}

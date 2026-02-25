@@ -30,7 +30,7 @@ export default function Hero() {
 
                   <div className="mt-8 flex flex-wrap gap-4 items-center">
                      <button className="bg-blue-600 hover:bg-blue-500 text-white font-medium px-8 py-3 rounded-lg shadow-md transition">
-                        JOIN THE COURSE
+                        JOIN THE GROUP
                      </button>
                      <span className="text-gray-400 flex items-center gap-2">
                         <svg
