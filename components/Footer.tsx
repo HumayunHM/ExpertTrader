@@ -4,7 +4,7 @@ export default function Footer() {
          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex flex-col md:flex-row justify-between items-center">
                <div className="text-gray-400 text-sm">
-                  © {new Date().getFullYear()} Badar Trader. All rights
+                  © {new Date().getFullYear()} Expert Trader. All rights
                   reserved.
                </div>
                <div className="flex space-x-6 mt-4 md:mt-0">

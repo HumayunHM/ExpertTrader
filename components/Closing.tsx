@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Closing() {
    return (
       <section className="py-20 bg-blue-600 text-white">
@@ -9,9 +11,11 @@ export default function Closing() {
                Start your journey to financial freedom today. Join thousands of
                successful traders.
             </p>
-            <button className="bg-white text-blue-600 hover:bg-gray-100 font-semibold px-10 py-4 rounded-lg text-lg shadow-lg transition">
-               Enroll Now
-            </button>
+            <Link href="/join">
+               <button className="bg-white text-blue-600 hover:bg-gray-100 font-semibold px-10 py-4 rounded-lg text-lg shadow-lg transition">
+                  Enroll Now
+               </button>
+            </Link>
          </div>
       </section>
    );
