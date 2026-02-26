@@ -40,7 +40,7 @@ export default function SuccessStory() {
             </h2>
 
             {/* Carousel container */}
-            <div className="relative max-w-6xl mx-auto">
+            <div className="relative max-w-3xl mx-auto">
                <div className="overflow-hidden rounded-2xl">
                   <div
                      className="flex transition-transform duration-500 ease-out"

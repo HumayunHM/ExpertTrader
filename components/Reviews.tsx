@@ -34,7 +34,7 @@ export default function Reviews() {
             </h2>
 
             {/* Carousel container */}
-            <div className="relative max-w-6xl mx-auto">
+            <div className="relative max-w-3xl mx-auto">
                <div className="overflow-hidden rounded-3xl border border-gray-700 bg-gray-900/50 p-4">
                   <div
                      className="flex transition-transform duration-500 ease-out"

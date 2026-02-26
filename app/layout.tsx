@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import FloatingWhatsApp from "@/components/FloatingWhatsApp"; // adjust path if needed
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -18,6 +19,7 @@ export default function RootLayout({
       <html lang="en">
          <body className={`${inter.className} bg-gray-50 text-gray-900`}>
             {children}
+            <FloatingWhatsApp />
          </body>
       </html>
    );
